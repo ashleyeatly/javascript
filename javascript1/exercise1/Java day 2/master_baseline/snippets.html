@@ -1,0 +1,45 @@
+<script>    
+    function getAndDisplayName() {
+        var name = document.querySelector("#name").value;
+        document.querySelector("#welcome").innerHTML = 
+            "Welcome to my site, " + name;
+    }     
+    document.querySelector("#submit").addEventListener("click", 
+        getAndDisplayName);   
+</script>
+
+<noscript>   
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>      
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+    </ul> 
+</noscript>
+
+<script src="my-script.js"></script>
+
+<script>   
+    // code here
+</script>
+
+<article onclick="alert('Please subscribe to continue reading')">
+</article>
+
+// This is a single line commentalert('Close me'); // A comment can be placed on the same line as code
+alert(/* Can't see me */);
+
+/*  
+Copyright 2018 StayAhead Training Ltd. All Rights Reserved.
+@fileoverview Description of file, 
+its uses and informationabout its dependencies.
+@author user@stayahead.com (Firstname Lastname)
+*/ 
+
+
+

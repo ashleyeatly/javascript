@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p {
+            color: rebeccapurple;
+        }
+
+        .kats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+        }
+    </style>
+    <!—some tags left out-->
+        <p> Reading Lightblue text on white might turn you into a zombie</p>
+        <title>Page Title</title>
+        <meta charset="utf-8">
+</head>
+
+<body>
+    <form>
+        <h1>My First Heading</h1><br>
+        <p id="welcome">Welcome to my site</p><br>
+
+
+    </form>
+    <div class="kats">
+        <h3>Test Test</h3>
+        <ul class="kats-grid">
+            <li>
+                <input type="text" id="name" name="name"><br>
+                <button type="button" id="submit">Submit</button><br>
+                <!-- A... --->
+            </li>
+            <li>
+                B
+                <!-- ... --->
+            </li>
+            <li>
+                C
+                <!-- ... --->
+            </li>
+            <li>
+                D
+                <!-- ... --->
+            </li>
+            <li>
+                E
+                <!-- ... --->
+            </li>
+            <li>
+                F
+                <!-- ... --->
+            </li>
+        </ul>
+    </div>
+    <script>
+        function getAndDisplayName() {
+            var name = document.querySelector("#name").value;
+            document.querySelector("#welcome").innerHTML =
+                "Welcome to my site, " + name;
+        }
+        document.querySelector("#submit").addEventListener(
+            "click", getAndDisplayName);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UNICODE</title>
+	<meta charset="utf-8" lang="en"  />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /*css rules*/
+        #something{
+            font-size: 4em;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <h1>UNICODE escapes</h1>
+    <div id="something">
+        <!-- html elements -->
+    </div>
+    <p><a href="https://mathiasbynens.be/notes/javascript-escapes">All you ever wanted to know about RegexP in JS by Mathias Bynens:</a>
+    </p>
+<script>
+    //JS code
+    var uni = '\u{1D306}';//just use hex part of unicode in curlies, escaped u must be lwr case
+    document.querySelector('#something').innerHTML = uni;
+</script>
+</body>
+
+</html>
