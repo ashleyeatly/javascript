@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOPS</title>
+    <style>
+
+    </style>
+    <!-- <script async src="#"></script> -->
+    <!-- <script async src='#'></script> -->
+    <script>
+        const band = ['bruce', 'patti', 'jake', 'max', 'nils'];
+        for (let index = 0; index < band.length; index++) {
+            console.log(`E-street menber No.${index + 1} : ${band[index]}`);
+        }
+        for (let m of band) {
+            console.log(m);
+        }
+        let w = 0;
+        // where condition is not a counter actually
+        while (w < band.length) {
+            console.log([w]);
+            // must increment in this example
+            w++;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>LOOPS</h1>
+    <select id="choice">
+        <option value="S">small</option>
+        <option value="M">medium</option>
+        <option value="L">large</option>
+    </select>
+    <p id="displayChoice"></p>
+    <script>
+        function choose() {
+            var message = '';
+            var choice = document.querySelector('#choice').value;
+            switch (choice) {
+                case 'S': message = 'small selected';
+                    break;
+                case 'M': message = 'medium selected';
+                    break;
+                case 'L': message = 'large selected';
+                    break;
+                default: message = 'please enter a t shirt size';
+            }
+            document.querySelector('#displayChoice').innerHTML = message;
+        }
+        document.querySelector('#choice').addEventListener('change', choose);
+    </script>
+</body>
+
+</html>

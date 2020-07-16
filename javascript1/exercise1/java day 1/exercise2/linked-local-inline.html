@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKED</title>
+    <style>
+
+    </style>
+    <script src="external.js">
+    </script>
+    <script>
+        function sayHi() {
+            alert("Hi local!");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>LINKED-LOCAL-INLINE</h1>
+    <button onclick="function sayHi(){alert('Hi from INLINE script');};sayHi()">Say hi</button>
+    <!-- <script src="external.js"></script> -->
+</body>
+
+</html>

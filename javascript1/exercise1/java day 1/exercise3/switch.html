@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH</title>
+    <style>
+
+    </style>
+    <!-- <script async src="#"></script> -->
+    <script async src='#'></script>
+</head>
+
+<body>
+    <h1>SWITCH</h1>
+    <select id="choice">
+        <option value="S">small</option>
+        <option value="M">medium</option>
+        <option value="L">large</option>
+    </select>
+    <p id="displayChoice"></p>
+    <script>
+        function choose() {
+            var message = '';
+            var choice = document.querySelector('#choice').value;
+            switch (choice) {
+                case 'S': message = 'small selected';
+                    break;
+                case 'M': message = 'medium selected';
+                    break;
+                case 'L': message = 'large selected';
+                    break;
+                default: message = 'please enter a t shirt size';
+            }
+            document.querySelector('#displayChoice').innerHTML = message;
+        }
+        document.querySelector('#choice').addEventListener('change', choose);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+
+    </style>
+    <script async src="#"></script>
+</head>
+
+<body>
+    <h1>CALCULATOR</h1>
+    <p id="welcome">Welcome to my site</p><br>
+    <input type="text" id="name" name="name"><br>
+    <button type="button" id="submit">Submit</button><br>
+    <!-- <button type="button" id="submit">Submit</button><br> -->
+    <script>
+        // var numString1 = prompt('enter a first number');
+        // var number1 = parseInt(numString1); // can throw exception
+        // var numString2 = prompt('enter a second number');
+        // var number2 = parseInt(numString2); // can throw exception
+        // var operator = prompt('enter an operator');
+        // var result = 0;
+        var continueLoop = true;
+        do {
+            var numString1 = prompt('enter a first number');
+            var number1 = parseInt(numString1); // can throw exception
+            var numString2 = prompt('enter a second number');
+            var number2 = parseInt(numString2); // can throw exception
+            var operator = prompt('enter an operator');
+            var result = 0;
+            switch (operator) {
+                case '+':
+                    result = number1 + number2;
+                    break;
+                case '-':
+                    result = number1 - number2;
+                    break;
+                case '*':
+                    result = number1 * number2;
+                    break;
+                case '/':
+                    result = number1 / number2;
+                    break;
+                case 'E':
+                    continueLoop = false;
+                    break;
+                default: alert('please enter a symbol from the list');
+            }
+            // console.log(result);
+            if (continueLoop) {
+                alert(`result of ${number1} ${operator} ${number2} = ${result}`);
+            }
+
+        } while (continueLoop);
+
+        function getAndDisplayName() {
+            var name = document.querySelector("#name").value;
+            document.querySelector("#welcome").innerHTML =
+                "Welcome to my site, " + name;
+        }
+        document.querySelector("#submit").addEventListener(
+            "click", getAndDisplayName);
+
+    </script>
+</body>
+
+</html>

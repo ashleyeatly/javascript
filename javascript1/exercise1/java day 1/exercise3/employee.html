@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE</title>
+    <style>
+
+    </style>
+    <!-- <script async src="#"></script> -->
+    <script>
+        const Cr = '\n';
+        const employeeName = 'Tim Smith'; // cant change
+        const startYear = 2017;
+        var salaryPerMonth = 2409.50;
+
+        var permanent = true;
+
+        var permanentString;
+        if (permanent) permanentString = 'Yes';
+        else permanentString = 'No';
+
+        var permanentString2 = (permanent) ? 'Yes' : 'No';
+
+        salaryPerMonth = 2510.90;
+        var tim = 'Name: ' + employeeName + ' Started with the company: ' + startYear + ' Salary per month: £' + salaryPerMonth + ' Employment status (Permanent): ' + permanent + '';
+        var tim2 =
+            `Name: ${employeeName} 
+            Started with the company: ${startYear}
+            Salary per month: £${salaryPerMonth} 
+            Employment status (Permanent): ${(permanent ? 'Yes' : 'No')}`;
+        // can we use the template literal $ notation and ?:
+        alert(tim2);
+    </script>
+</head>
+
+<body>
+    <h1>EMPLOYEE</h1>
+    <script>
+
+    </script>
+</body>
+
+</html>
