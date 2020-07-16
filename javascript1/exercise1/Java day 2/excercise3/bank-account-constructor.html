@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANK ACCOUNT</title>
+    <style>
+
+    </style>
+    <script async src="#"></script>
+</head>
+
+<body>
+    <h1>BANK ACCOUNT</h1>
+    <script>
+
+        function Account(name, number, balance) {
+            this.name = name;
+            this.number = number;
+            this.balance = balance;
+        };
+
+        Account.prototype.deposit = function (amount) {
+            this.balance += amount;
+        };
+        Account.prototype.withdraw = function (amount) {
+            this.balance -= amount;
+        };
+
+        a1 = new Account('a1', 1, 100);
+        a2 = new Account('a2', 2, 100);
+
+        Account.prototype.display = function () {
+            alert(`name ${this.name} number ${this.number} balance ${this.balance}`);
+        }
+        a1.display();
+        a2.display();
+        a1.deposit(100);
+        a2.withdraw(10);
+        a1.display();
+        a2.display();
+    </script>
+</body>
+
+</html>

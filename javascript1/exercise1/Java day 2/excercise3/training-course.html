@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAINING COURSE</title>
+    <style>
+
+    </style>
+    <script async src="#"></script>
+</head>
+
+<body>
+    <h1>TRAINING COURSE</h1>
+    <script>
+        var trainees = new Array(
+            'Jordan Boswell',
+            'Gareth Bryant',
+            'Emma Kapias',
+            'Matthew Donaghue',
+            'Salih Osman',
+            'Mwrinkia Njonge',
+            'Kadmin Van Vurren',
+            'Ashley Eatly');
+        var allTrainees = '';
+        trainees.sort();
+        for (var i = 0; i < trainees.length; i++) {
+            // allTrainees += '\n';
+            allTrainees += trainees[i] + '\n';
+        };
+        alert(`allTrainees = \n${allTrainees}`);
+        trainees.push('Alan Lofgren');
+        trainees.sort();
+
+        // or
+        // var index = trainees.indexOf('Ashley Eatly');
+        // if (index > -1) {
+        //     trainees.splice(index,1)
+        // }
+
+        var found = false;
+        var indexToRemove = -1;
+        for (var idx = 0; idx < trainees.length && !found; idx++) {
+            if (trainees[idx] === 'Ashley Eatly') {
+                indexToRemove = idx;
+                found = true;
+                // break;
+            }
+        };
+
+        trainees.splice(indexToRemove, 1);
+        var mostTrainees = '';
+        for (var trainee of trainees) {
+            // mostTrainees += '\n';
+            mostTrainees += trainee + '\n';
+        }
+        alert(`mostTrainees = \n${mostTrainees}`);
+
+        // TODO forEach
+
+        // function processElement(element, index, array){
+
+        // }
+        // trainees.forEach(element => {
+
+        // });
+
+
+
+    </script>
+</body>
+
+</html>
