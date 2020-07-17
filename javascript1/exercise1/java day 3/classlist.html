@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSLIST</title>
+    <style>
+        .square {
+            width: 8em;
+            height: 9em;
+            background: greenyellow;
+            border: 2px solid black;
+        }
+
+        .hightlight {
+            width: 8em;
+            height: 8em;
+            background: lightblue;
+            border: 2px solid black;
+
+        }
+    </style>
+    <!-- <script async src="#"></script> -->
+</head>
+
+<body>
+    <div id="square" class="square">
+        I am square
+    </div>
+    <button id="highlight">highlight</button>
+    <!-- <h1>TEMPLATE</h1> -->
+    <script>
+        document.querySelector('#highlight').addEventListener("click", function () {
+            var square = document.querySelector('#square');
+            square.classList.toggle('highlight');
+        })
+
+    </script>
+</body>
+
+</html>

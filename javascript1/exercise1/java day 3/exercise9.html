@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        li {
+            font-size: 2em;
+        }
+    </style>
+    <script async src="#"></script>
+</head>
+
+<body>
+    <h1 class="header-class">Exercise 9</h1>
+
+    <p>All HTML elements are JavaScript objects.</p>
+    <p>The <span>document</span> object is the root of the DOM.</p>
+    <p>document methods for element referencing:</p>
+    <ul id="documentMethodList">
+        <li>getElementsByTagName</li>
+        <li>getElementsByClassName</li>
+        <li>getElementById</li>
+        <li>querySelector</li>
+    </ul>
+    <table id="elementPropertyList">
+        <tr>
+            <td>PROPERTY</td>
+            <td>DESCRIPTION</td>
+        </tr>
+        <tr>
+            <td>innerHTML</td>
+            <td>Element content</td>
+        </tr>
+        <tr>
+            <td>style</td>
+            <td>The element's style object</td>
+        </tr>
+    </table>
+    <script>
+        // Obtain a reference to the heading element and set its innerHTML 
+        // to Document Object Model DOM
+        // there is only one but
+        var header = document.querySelector('h1');
+        // var header2 = document.querySelector()
+        header.innerHTML = 'Document Object Model (DOM)';
+        // Obtain a reference to the body element and change its font to Helvetica
+        var body = document.querySelector('body');
+        // body.style.fontFamily = 'Arial, Helvetica, sans-serif';
+        body.style.fontFamily = 'Helvetica';
+        // Obtain a reference to the span element in second paragraph 
+        // and assign it in the highlight class
+        var span = document.querySelector('span');
+        span.classList.add('highlight');
+        // Obtain a reference to the unordered list and:
+        // set its type attribute with a value of square and...
+        // display the innerHTML of its third child in an alert
+        // in this one [0] is getElementsByTagName
+        // [1] is getElementsByClassName
+        // [2] is getElementsById
+        // [3] is querySelector
+        // there is only one but we should make it unique
+        var list = document.querySelector('ul');
+
+        var listItems1 = document.querySelector('#documentMethodList');
+        // This is a HTMLCollection(4)
+        // with each element as a <li>
+        var listItems = documentMethodList.getElementsByTagName('li');
+        list.setAttribute('type', 'square');
+        // alert(list.children[2].innerHTML);
+        // alert(list.children[2].innerHTML);
+        // Declare a variable named tableRow and assign it to a new table row element
+        var tableRow = document.createElement('tr');
+        // Declare a variable called propertyCell and assign it a new table cell element
+        var propertyCell = document.createElement('td');
+        // Declare a variable named descriptionCell and assign it a new table cell element
+        var descriptionCell = document.createElement('td');
+        // Set the innerHTML of the propertyCell to ClassList
+        propertyCell.innerHTML = 'classList';
+        // Set the innerHTML of the descriptionCell to Array of classes assigned to the element
+        descriptionCell.innerHTML = 'An array of classes assigned to the element';
+        // Append the propertyCell and descriptionCell to the tableRow
+        tableRow.appendChild(propertyCell);
+        tableRow.appendChild(descriptionCell);
+        // Obtain a reference to the array of tableCells and set each one with 10px of right padding
+        document.querySelector('table').appendChild(tableRow);
+        var allCells = document.querySelectorAll('td');
+        for (var cell of allCells) {
+            cell.style.paddingRight = '20px';
+        }
+        // forEach()
+    </script>
+</body>
+
+</html>

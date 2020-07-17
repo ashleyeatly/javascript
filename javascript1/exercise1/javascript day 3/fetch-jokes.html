@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <h1>Jokes</h1>
+    <h2>Random Chuck Norris</h2>
+    <button id='loadStuffButton'>Load Joke...</button>
+    <p id="joke">...</p>
+    <style>
+        #para,
+        #hide-button {
+            display: none;
+        }
+    </style>
+    <script>
+        function loadStuff() {
+            let joke = fetch('https://api.icndb.com/jokes/random')
+                .then(response => {
+                    console.table(response.text());
+                    response.text()
+                        .then(text =>
+                            document.querySelector('#joke').innerHTML = (text
+                                .substring(text.indexOf('joke') + 8,
+                                    text.indexOf('categories') - 4)
+                            )
+                        )
+                });
+        }
+
+        let button = document.querySelector('#loadStuffButton');
+        button.addEventListener('click', function () {
+            loadStuff();
+        })
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
